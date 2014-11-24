@@ -1,0 +1,25 @@
+// Resets & Functions
+@import "compass/css3";
+@import "compass/reset";
+
+// @font-face {
+//     font-family: 'Lego';
+//     src: url('../fonts/LEGO-BRIX.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+body {
+	font-family: "Avenir", "Helvetica Neue", Arial, Helvetica, "Geneva", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-size: 90px;
+	background: #000;
+	color: #E59340;
+}
+
+img {
+	height: 100px;
+	display: inline-block;
+	vertical-align: bottom;
+}

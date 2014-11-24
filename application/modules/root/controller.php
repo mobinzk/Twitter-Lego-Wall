@@ -12,17 +12,6 @@
 			$data['description'] = '';
 			$data['keywords']    = '';
 
-			$convert = new Convert();
-
-			$twitter = new Twitter;
-			$tweets = $twitter->getTweets();
-
-			// echo $tweets->statuses[0]->text;
-			
-			if($tweets->statuses[0]->text) {
-				$data['text'] = $convert->charachters($tweets->statuses[0]->text);
-			}
-
 
 
 
@@ -31,6 +20,19 @@
 			$this->view->set('view', 'index.php');
 			$this->view->load();
 
+		}
+
+		public function get() {
+			$convert = new Convert();
+
+			$twitter = new Twitter;
+			$tweets = $twitter->getTweets();
+
+			if($_GET['text'] != 'undefined') {
+				echo $convert->charachters($_GET['text']);
+			} else if($tweets->statuses[0]->text) {
+				echo $convert->charachters($tweets->statuses[0]->user->screen_name.': '.$tweets->statuses[0]->text);
+			}
 		}
 
 	}

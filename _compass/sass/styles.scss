@@ -18,8 +18,19 @@ body {
 	color: #E59340;
 }
 
+.wrapper {
+	left: 0;
+	top: 0;
+	padding: 30px;
+	height: 1000px;
+}
+
+.word {
+	display: inline-flex;
+}
+
 img {
-	height: 100px;
+	height: 70px;
 	display: inline-block;
 	vertical-align: bottom;
 }

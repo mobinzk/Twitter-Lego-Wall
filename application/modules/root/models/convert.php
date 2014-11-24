@@ -20,7 +20,34 @@
 
 			$text = strtoupper($text);
 
-			$imgStart = '<img src="application/static/images/alphabet/';
+			// $length = strlen($text);
+
+			// switch ($length) {
+			// 	case 1:
+			// 	case 2:
+			// 		$height = '700';
+			// 		break;
+			// 	case 3:
+			// 		$height = '400';
+			// 		break;
+			// 	case 4:
+			// 	case 5:
+			// 	case 6:
+			// 	case 7:
+			// 	case 8:
+			// 		$height = '300';
+			// 		break;
+			// 	case 9:
+			// 	case 10:
+			// 		$height = '250';
+			// 		break;
+				
+			// 	default:
+			// 		$height = '80';
+			// 		break;
+			// }
+
+			$imgStart = '<img style="height:'.$height.'px" src="application/static/images/alphabet/';
 			$imgEnd   = '" alt="">';
 
 			$replaceThis = array(
@@ -98,7 +125,13 @@
 
 			$raplace = str_replace($replaceThis, $replaceWith, $text);
 
-			return $raplace;
+			$text = explode('&nbsp;&nbsp;', $raplace);
+
+			foreach ($text as $value) {
+				$tt .= '<div class="word">'.$value.'</div>&nbsp;&nbsp;';
+			}
+
+			return $tt;
 
 		}
 

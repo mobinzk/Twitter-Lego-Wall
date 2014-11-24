@@ -17,7 +17,7 @@
 			$twitter = new Twitter;
 			$tweets = $twitter->getTweets();
 
-			echo $tweets->statuses[0]->text;
+			// echo $tweets->statuses[0]->text;
 			
 			if($tweets->statuses[0]->text) {
 				$data['text'] = $convert->charachters($tweets->statuses[0]->text);

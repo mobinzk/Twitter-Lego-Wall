@@ -83,7 +83,8 @@
 									'W',
 									'X',
 									'Y',
-									'Z'
+									'Z',
+									'@'
 
 								);
 			
@@ -120,7 +121,8 @@
 									$imgStart.'W.jpg'.$imgEnd,
 									$imgStart.'X.jpg'.$imgEnd,
 									$imgStart.'Y.jpg'.$imgEnd,
-									$imgStart.'Z.jpg'.$imgEnd
+									$imgStart.'Z.jpg'.$imgEnd,
+									$imgStart.'@.jpg'.$imgEnd,
 								);
 
 			$raplace = str_replace($replaceThis, $replaceWith, $text);

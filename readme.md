@@ -1,4 +1,4 @@
-# Twitter Lego wall
+# Twitter Lego Wall
 This app has been created specifically for SotonCreatives lego event, to show all tweets about the event in lego typeface.
 
 ## How to use
